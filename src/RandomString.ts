@@ -57,7 +57,7 @@ export default class RandomString {
 	 * @param {RandomStringOptions} [options={}] - Configuration options.
 	 * @returns {string} Generated random string.
 	 */
-	static new(length?: number, options?: RandomStringOptions, isValid?: ValidatorCallback) {
+	public static new(length?: number, options?: RandomStringOptions, isValid?: ValidatorCallback) {
 
 		return new RandomString().build(length, options, isValid);
 
@@ -70,7 +70,7 @@ export default class RandomString {
 	 * @param {RandomStringOptions} [options={}] - Generation options.
 	 * @returns {string} Generated string.
 	 */
-	public build(...args: [number?, RandomStringOptions?, ValidatorCallback?]): string {
+	private build(...args: [number?, RandomStringOptions?, ValidatorCallback?]): string {
 
 		const [
 			length = 5,
